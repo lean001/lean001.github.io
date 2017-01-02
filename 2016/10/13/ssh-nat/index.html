@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="openwrt, ssh, autossh," />
 
 
 
@@ -84,15 +84,25 @@
 
 
 
-<meta name="description" content="If you can fight, fight">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lean">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="有台刷了openwrt的路由器通过拨号上网，但是拨号获得的ip是内网ip(你懂的)，所以在公司或者其他不直连路由器的情况下就没法管理路由器。所以就有下文的折腾。
+
+原理router通过ssh连接到VPS上并创建一个代理端口，当computer通过代理端口连接到VPS时，VPS上的sshd就会将该代理端口的数据通过router的ssh链接转发到router本地。
+前提条件VPS: 有固定公网ip，s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="openwrt-ssh内网穿透">
+<meta property="og:url" content="http://yoursite.com/2016/10/13/ssh-nat/index.html">
 <meta property="og:site_name" content="Lean">
-<meta property="og:description" content="If you can fight, fight">
+<meta property="og:description" content="有台刷了openwrt的路由器通过拨号上网，但是拨号获得的ip是内网ip(你懂的)，所以在公司或者其他不直连路由器的情况下就没法管理路由器。所以就有下文的折腾。
+
+原理router通过ssh连接到VPS上并创建一个代理端口，当computer通过代理端口连接到VPS时，VPS上的sshd就会将该代理端口的数据通过router的ssh链接转发到router本地。
+前提条件VPS: 有固定公网ip，s">
+<meta property="og:updated_time" content="2017-01-02T06:46:07.738Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lean">
-<meta name="twitter:description" content="If you can fight, fight">
+<meta name="twitter:title" content="openwrt-ssh内网穿透">
+<meta name="twitter:description" content="有台刷了openwrt的路由器通过拨号上网，但是拨号获得的ip是内网ip(你懂的)，所以在公司或者其他不直连路由器的情况下就没法管理路由器。所以就有下文的折腾。
+
+原理router通过ssh连接到VPS上并创建一个代理端口，当computer通过代理端口连接到VPS时，VPS上的sshd就会将该代理端口的数据通过router的ssh链接转发到router本地。
+前提条件VPS: 有固定公网ip，s">
 
 
 
@@ -113,10 +123,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/10/13/ssh-nat/"/>
 
 
-  <title> Lean </title>
+  <title> openwrt-ssh内网穿透 | Lean </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="en">
@@ -137,9 +147,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -236,9 +244,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -258,10 +266,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/10/13/use-rtpproxy-in-ims/" itemprop="url">
-                  use-rtpproxy-in-ims
-                </a>
+                openwrt-ssh内网穿透
               
             
           </h1>
@@ -301,103 +306,7 @@
       
 
       
-        
-          
-            <h1 id="rtpproxy"><a href="#rtpproxy" class="headerlink" title="rtpproxy"></a>rtpproxy</h1><p>&ensp;&ensp;&ensp;&ensp;顾名思义rtpproxy就是一种用于rtp代理的工具。在ims中，UE_A给UE_B打电话的时候信令面(sip)和数据面(媒体数据)是分开的，UE_A的媒体数据可以不经过IMS直接到达UE_B，反过来也一样。当两个UE都是在同一个域中时，就算没有rtp代理也是可以正常通话的，因为两个UE可以直接互通(媒体数据在同一EPC下溜一圈就转到另一个UE了)，但当两个UE在不同域时，两个UE就不能直接互通了(通俗来说就是UE_A可以ping通UE_B)</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/13/ssh-nat/" itemprop="url">
-                  openwrt-ssh内网穿透
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-10-13T23:12:52+08:00" content="2016-10-13">
-              2016-10-13
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>有台刷了openwrt的路由器通过拨号上网，但是拨号获得的ip是内网ip(你懂的)，所以在公司或者其他<br>不直连路由器的情况下就没法管理路由器。所以就有下文的折腾。</p>
+        <p>有台刷了openwrt的路由器通过拨号上网，但是拨号获得的ip是内网ip(你懂的)，所以在公司或者其他<br>不直连路由器的情况下就没法管理路由器。所以就有下文的折腾。</p>
 <hr>
 <h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>router通过ssh连接到VPS上并创建一个代理端口，当computer通过代理端口连接到VPS时，VPS上的sshd<br>就会将该代理端口的数据通过router的ssh链接转发到router本地。</p>
 <h3 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h3><p>VPS: 有固定公网ip，sshd<br>router：openwrt，sshd，ssh<br>computer：ssh</p>
@@ -460,138 +369,63 @@
 <p>确认连接到vps<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">router$ netstat -anptu | grep ssh</div></pre></td></tr></table></figure></p>
 <p>如果没有结果，则根据/var/log/ssh_nat.log解决</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/11/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-10-11T22:49:38+08:00" content="2016-10-11">
-              2016-10-11
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-
-          
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/openwrt-ssh-autossh/" rel="tag">#openwrt, ssh, autossh</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/11/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
 
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/13/use-rtpproxy-in-ims/" rel="prev" title="use-rtpproxy-in-ims">
+                use-rtpproxy-in-ims <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -599,6 +433,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -618,8 +456,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -662,6 +509,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#原理"><span class="nav-number">1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前提条件"><span class="nav-number">2.</span> <span class="nav-text">前提条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">3.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链接保持"><span class="nav-number">4.</span> <span class="nav-text">链接保持</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -758,6 +616,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 
