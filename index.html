@@ -1,788 +1,170 @@
-<!doctype html>
-
-
-
-  
-
-
-<html class="theme-next muse use-motion">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
-
-
-
-
-
-
-<meta name="description" content="If you can fight, fight">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lean">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Lean">
-<meta property="og:description" content="If you can fight, fight">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lean">
-<meta name="twitter:description" content="If you can fight, fight">
-
-
-
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Muse',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    }
-  };
-</script>
-
-
-
-
-  <link rel="canonical" href="http://yoursite.com/"/>
-
-
-  <title> Lean </title>
-</head>
-
-<body itemscope itemtype="//schema.org/WebPage" lang="en">
-
-  
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
-
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Lean</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle"></p>
-</div>
-
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
+<attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-4bc56f8c-e368-48d0-b361-d4e442d5c00f"></attachment><p> var NexT = window.NexT || {}; var CONFIG = { scheme: 'Muse', sidebar: {"position":"left","display":"post"}, fancybox: true, motion: true, duoshuo: { userId: '0', author: 'Author' } };  Lean <a href="about:blank" target="_blank">Lean</a></p><p><br></p><p><br></p><ul><li><a href="about:blank" target="_blank">  </a></li><li><a href="about:blank" target="_blank"> Home </a></li><li><a href="about:blank" target="_blank">  </a></li><li><a href="about:blank" target="_blank"> Categories </a></li><li><a href="about:blank" target="_blank">  </a></li><li><a href="about:blank" target="_blank"> About </a></li><li><a href="about:blank" target="_blank">  </a></li><li><a href="about:blank" target="_blank"> Archives </a></li><li><a href="about:blank" target="_blank">  </a></li><li><a href="about:blank" target="_blank"> Tags </a></li></ul><h1><a href="about:blank" target="_blank"> use-rtpproxy-in-ims </a></h1><p>Posted on 2016-10-13 </p><h1>rtpproxy</h1><p>顾名思义rtpproxy就是一种用于rtp代理的工具。在ims中，UE_A给UE_B打电话的时候信令面(sip)和数据面(媒体数据)是分开的，UE_A的媒体数据可以不经过IMS直接到达UE_B，反过来也一样。当两个UE都是在同一个域中时，就算没有rtp代理也是可以正常通话的，因为两个UE可以直接互通(媒体数据在同一EPC下溜一圈就转到另一个UE了)，但当两个UE在不同域时，两个UE就不能直接互通了(通俗来说就是UE_A可以ping通UE_B)</p><p><br></p><p><br></p><p><br></p><h1><a href="about:blank" target="_blank"> openwrt-ssh内网穿透 </a></h1><p>Posted on 2016-10-13 </p><p>有台刷了openwrt的路由器通过拨号上网，但是拨号获得的ip是内网ip(你懂的)，所以在公司或者其他</p><p>不直连路由器的情况下就没法管理路由器。所以就有下文的折腾。</p><hr><h3>原理</h3><p>router通过ssh连接到VPS上并创建一个代理端口，当computer通过代理端口连接到VPS时，VPS上的sshd</p><p>就会将该代理端口的数据通过router的ssh链接转发到router本地。</p><h3>前提条件</h3><p>VPS: 有固定公网ip，sshd</p><p>router：openwrt，sshd，ssh</p><p>computer：ssh</p><h3>准备工作</h3><ul><li><strong>VPS</strong></li></ul><ol><li>创建用户（也可以不创建直接，使用vps上的用户）</li><li><br></li></ol><pre class="ql-syntax" spellcheck="false">1
+2
+   vps$ useradd vps_router
+vps$ passward vps_router
+</pre><ol><li>创建密钥（不用输入密码，一路回车）</li><li><br></li></ol><pre class="ql-syntax" spellcheck="false">1
+2
+3
+4
+5
+6
+7
+8
+9
+vps$ su vps_router
+vps$ ssh-keygen -t rsa -C “vps_router”
+vps$ cat /home/vps_router/.ssh/id_rsa.pub &gt;&gt; /home/vps_router/.ssh/authorized_keys
+vps$ chmod 600 /home/vps_router/.ssh/authorized_keys  #设置权限，不然登陆认证不通过
+vps$ chmod 700 /home/vps_router/.ssh
       
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            Categories
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            About
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/13/use-rtpproxy-in-ims/" itemprop="url">
-                  use-rtpproxy-in-ims
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-10-13T23:12:52+08:00" content="2016-10-13">
-              2016-10-13
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="rtpproxy"><a href="#rtpproxy" class="headerlink" title="rtpproxy"></a>rtpproxy</h1><p>&ensp;&ensp;&ensp;&ensp;顾名思义rtpproxy就是一种用于rtp代理的工具。在ims中，UE_A给UE_B打电话的时候信令面(sip)和数据面(媒体数据)是分开的，UE_A的媒体数据可以不经过IMS直接到达UE_B，反过来也一样。当两个UE都是在同一个域中时，就算没有rtp代理也是可以正常通话的，因为两个UE可以直接互通(媒体数据在同一EPC下溜一圈就转到另一个UE了)，但当两个UE在不同域时，两个UE就不能直接互通了(通俗来说就是UE_A可以ping通UE_B)</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/13/ssh-nat/" itemprop="url">
-                  openwrt-ssh内网穿透
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-10-13T23:12:52+08:00" content="2016-10-13">
-              2016-10-13
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>有台刷了openwrt的路由器通过拨号上网，但是拨号获得的ip是内网ip(你懂的)，所以在公司或者其他<br>不直连路由器的情况下就没法管理路由器。所以就有下文的折腾。</p>
-<hr>
-<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>router通过ssh连接到VPS上并创建一个代理端口，当computer通过代理端口连接到VPS时，VPS上的sshd<br>就会将该代理端口的数据通过router的ssh链接转发到router本地。</p>
-<h3 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h3><p>VPS: 有固定公网ip，sshd<br>router：openwrt，sshd，ssh<br>computer：ssh</p>
-<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
-<li><p><strong>VPS</strong></p>
-<ol>
-<li><p>创建用户（也可以不创建直接，使用vps上的用户）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">   vps$ useradd vps_router</div><div class="line">vps$ passward vps_router</div></pre></td></tr></table></figure>
-</li>
-<li><p>创建密钥（不用输入密码，一路回车）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">vps$ su vps_router</div><div class="line">vps$ ssh-keygen -t rsa -C “vps_router”</div><div class="line">vps$ cat /home/vps_router/.ssh/id_rsa.pub &gt;&gt; /home/vps_router/.ssh/authorized_keys</div><div class="line">vps$ chmod 600 /home/vps_router/.ssh/authorized_keys  <span class="comment">#设置权限，不然登陆认证不通过</span></div><div class="line">vps$ chmod 700 /home/vps_router/.ssh</div><div class="line">      </div><div class="line">      <span class="comment">#将私钥/home/vps_router/.ssh/id_rsa下载下来并拷贝到router的/root/.ssh/目录下，并设置权限</span></div><div class="line">router$ chmod 600 /root/.ssh/id_rsa</div><div class="line">router$ chmod 700 /root/.ssh</div></pre></td></tr></table></figure>
-</li>
-<li><p>配置sshd</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">vps$ vim /etc/ssh/sshd_config</div><div class="line">    RSAAuthentication yes  <span class="comment"># 用于免密登陆</span></div><div class="line">       PubkeyAuthentication yes </div><div class="line">    GatewayPorts yes <span class="comment">#开启端口转发</span></div><div class="line"></div><div class="line">    vps$ service sshd restart <span class="comment">#编辑完后重启sshd</span></div></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-</ul>
-<ul>
-<li><p><strong>router</strong></p>
-<ol>
-<li><p>在路由器上测试vps_router免密登陆VPS</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">router$ ssh -p remote_port vps_router@vps_ip -i /root/.ssh/id_rsa</div></pre></td></tr></table></figure>
-<p>如果不用输入密码登录成功，则可跳过下面这一步。<br>如果出现ssh Error string too long之类的：<br>openwrt上ssh、scp命令是链接到/usr/sbin/dropbear（可通过which ssh查看确认），<br>dropbear使用的私钥格式与openssh的私钥格式不同导致认证不通过。<br>这里有两种办法解决：</p>
-<blockquote>
-<p>一、在VPS上使用dropbearconvert命令将id_rsa转换，然后重新导入router中；<br>二、删除/usr/bin/ssh 和/usr/bin/scp，安装openssh</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">router$ rm /usr/bin/ssh</div><div class="line">router$ rm /usr/bin/scp</div><div class="line">router$ opkg update</div><div class="line">router$ opkg install openssh-client openssh-server</div></pre></td></tr></table></figure>
-<ol>
-<li>测试ssh代理<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">router$ ssh -N<span class="built_in">fg</span> -R proxy_port:localhost:22 vps_router@vps_ip -p remote_port -i /root/.ssh/id_rsa</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>参数解析：</p>
-<blockquote>
-<p>-N: 不执行远程命令<br>-f：后台运行<br>-g：允许远程主机连接主机的转发端口<br>-R: 设定端口转发地址<br>proxy_port：vps用转发的端口，也就是computer用于登陆的端口<br>remote_port: vps上sshd监听的端口，默认是22，但一般vps上都不会采用默认<br>vps_ip：vps的公网ip</p>
-</blockquote>
-<p>如果连接成功，则在vps上</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vps$ lsof -i :proxy_port</div></pre></td></tr></table></figure>
-<p>可看到已经vps上已经监听代理端口，此时在computer上</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">computer$ ssh -p proxy_port root@vps_ip</div></pre></td></tr></table></figure>
-<p><strong>这里的root是路由器router上的，同样的输入的密码也要是路由器上的root的用户密码。</strong></p>
-</li>
-</ol>
-</li>
-</ul>
-<h3 id="链接保持"><a href="#链接保持" class="headerlink" title="链接保持"></a>链接保持</h3><p>ssh的连接在一段时间内无数据会自动端口，一断开内网就没法继续穿透了，好在有个维护链接的工具autossh，</p>
-<ul>
-<li>autossh安装</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">router$ opkg update</div><div class="line">router$ opkg install autossh</div></pre></td></tr></table></figure>
-<p>如果安装不成功，可在<a href="https://github.com/hewenhao2008/autossh-openwrt" target="_blank" rel="external">github</a>上下载源码，然后使用路由器对应的SDK编译成ipk文件安装。</p>
-<ul>
-<li>autossh配置<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">router$ vim /etc/config/autossh</div><div class="line"></div><div class="line">config autossh</div><div class="line">        option ssh      <span class="string">'-i /root/.ssh/id_rsa -N -R proxy_port:localhost:22 vps_router@vps_ip -p remote_port'</span></div><div class="line">        option gatetime <span class="string">'0'</span></div><div class="line">        option monitorport      <span class="string">'20000'</span></div><div class="line">        option echo_port        <span class="string">'7'</span></div><div class="line">        option poll     <span class="string">'10'</span></div><div class="line">        option first_poll       <span class="string">'10'</span></div><div class="line">        option debug    <span class="string">'1'</span>  <span class="comment">#下面三行，只是为了测试配置是否成功，完成后可删掉</span></div><div class="line">        option log_file         <span class="string">'/var/log/ssh_nat.log'</span></div><div class="line">        option log_level        <span class="string">'4</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>保存退出</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">router$ vim /etc/init.d/autossh</div><div class="line"></div><div class="line"><span class="comment">#!/bin/sh /etc/rc.common</span></div><div class="line"><span class="comment"># Copyright (C) 2007-2011 OpenWrt.org</span></div><div class="line"></div><div class="line">START=80</div><div class="line"></div><div class="line"><span class="function"><span class="title">start_instance</span></span>() &#123;</div><div class="line">        <span class="built_in">local</span> section=<span class="string">"<span class="variable">$1</span>"</span></div><div class="line"></div><div class="line">        config_get ssh <span class="string">"<span class="variable">$section</span>"</span> <span class="string">'ssh'</span></div><div class="line">        config_get gatetime <span class="string">"<span class="variable">$section</span>"</span> <span class="string">'gatetime'</span></div><div class="line">        config_get monitorport <span class="string">"<span class="variable">$section</span>"</span> <span class="string">'monitorport'</span></div><div class="line">        config_get echo_port <span class="string">"<span class="variable">$section</span>"</span> <span class="string">'echo_port'</span></div><div class="line">        config_get poll <span class="string">"<span class="variable">$section</span>"</span> <span class="string">'poll'</span></div><div class="line">        config_get first_poll <span class="string">"<span class="variable">$section</span>"</span> <span class="string">'first_poll'</span></div><div class="line">        config_get debug <span class="string">"<span class="variable">$section</span>"</span> <span class="string">'debug'</span></div><div class="line">        config_get log_file <span class="string">"<span class="variable">$section</span>"</span> <span class="string">'log_file'</span></div><div class="line">        config_get log_level <span class="string">"<span class="variable">$section</span>"</span> <span class="string">'log_level'</span></div><div class="line"></div><div class="line">        <span class="built_in">export</span> AUTOSSH_GATETIME=<span class="string">"<span class="variable">$&#123;gatetime&#125;</span>"</span></div><div class="line">        <span class="built_in">export</span> AUTOSSH_POLL=<span class="string">"<span class="variable">$&#123;poll&#125;</span>"</span></div><div class="line">        <span class="built_in">export</span> AUTOSSH_FIRST_POLL=<span class="string">"<span class="variable">$&#123;first_poll&#125;</span>"</span></div><div class="line">        <span class="built_in">export</span> AUTOSSH_DEBUG=<span class="string">"<span class="variable">$&#123;debug&#125;</span>"</span></div><div class="line">        <span class="built_in">export</span> AUTOSSH_LOGFILE=<span class="string">"<span class="variable">$&#123;log_file&#125;</span>"</span></div><div class="line">        <span class="built_in">export</span> AUTOSSH_LOGLEVEL=<span class="string">"<span class="variable">$&#123;log_level&#125;</span>"</span></div><div class="line">        <span class="built_in">export</span> AUTOSSH_PATH=<span class="string">"/usr/bin/ssh"</span>   <span class="comment">#这一行，可根据实际情况加入</span></div><div class="line"></div><div class="line"><span class="comment">#       service_start /usr/sbin/autossh -M $&#123;monitorport&#125;:$&#123;echo_port&#125; -f $&#123;ssh&#125;</span></div><div class="line">        service_start /usr/sbin/autossh -M <span class="variable">$&#123;monitorport&#125;</span> <span class="_">-f</span> <span class="variable">$&#123;ssh&#125;</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="title">boot</span></span>() &#123;</div><div class="line">    <span class="built_in">return</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="title">start</span></span>() &#123;</div><div class="line">        config_load <span class="string">'autossh'</span></div><div class="line">        config_foreach start_instance <span class="string">'autossh'</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="title">stop</span></span>() &#123;</div><div class="line">        service_stop /usr/sbin/autossh</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>保存退出，设置开机启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">router$ /etc/init.d/autossh <span class="built_in">enable</span></div></pre></td></tr></table></figure></p>
-<p>启动autossh<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">router$ /etc/init.d/autossh restart</div></pre></td></tr></table></figure></p>
-<p>确认连接到vps<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">router$ netstat -anptu | grep ssh</div></pre></td></tr></table></figure></p>
-<p>如果没有结果，则根据/var/log/ssh_nat.log解决</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/11/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-10-11T22:49:38+08:00" content="2016-10-11">
-              2016-10-11
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/avatar.jpg"
-               alt="Lean" />
-          <p class="site-author-name" itemprop="name">Lean</p>
-          <p class="site-description motion-element" itemprop="description">If you can fight, fight</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">posts</span>
-            </a>
-          </div>
-
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">tags</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        
-        
-
-      </section>
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Lean</span>
-</div>
-
-<div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
-</div>
-
-<div class="theme-info">
-  Theme -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
-  </a>
-</div>
-
-        
-
-        
-      </div>
-    </footer>
-
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-  
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
-
-</body>
-</html>
+      #将私钥/home/vps_router/.ssh/id_rsa下载下来并拷贝到router的/root/.ssh/目录下，并设置权限
+router$ chmod 600 /root/.ssh/id_rsa
+router$ chmod 700 /root/.ssh
+</pre><ol><li>配置sshd</li><li><br></li></ol><pre class="ql-syntax" spellcheck="false">1
+2
+3
+4
+5
+6
+vps$ vim /etc/ssh/sshd_config
+    RSAAuthentication yes  # 用于免密登陆
+       PubkeyAuthentication yes 
+    GatewayPorts yes #开启端口转发
+    vps$ service sshd restart #编辑完后重启sshd
+</pre><ul><li><strong>router</strong></li></ul><ol><li>在路由器上测试vps_router免密登陆VPS</li><li><br></li></ol><pre class="ql-syntax" spellcheck="false">1
+router$ ssh -p remote_port vps_router@vps_ip -i /root/.ssh/id_rsa
+</pre><ol><li>如果不用输入密码登录成功，则可跳过下面这一步。</li><li>如果出现ssh Error string too long之类的：</li><li>openwrt上ssh、scp命令是链接到/usr/sbin/dropbear（可通过which ssh查看确认），</li><li>dropbear使用的私钥格式与openssh的私钥格式不同导致认证不通过。</li><li>这里有两种办法解决：</li></ol><blockquote>一、在VPS上使用dropbearconvert命令将id_rsa转换，然后重新导入router中；</blockquote><blockquote>二、删除/usr/bin/ssh 和/usr/bin/scp，安装openssh</blockquote><pre class="ql-syntax" spellcheck="false">1
+2
+3
+4
+router$ rm /usr/bin/ssh
+router$ rm /usr/bin/scp
+router$ opkg update
+router$ opkg install openssh-client openssh-server
+</pre><ol><li>测试ssh代理</li></ol><pre class="ql-syntax" spellcheck="false">1
+router$ ssh -Nfg -R proxy_port:localhost:22 vps_router@vps_ip -p remote_port -i /root/.ssh/id_rsa
+</pre><ol><li>参数解析：</li><li><br></li></ol><blockquote>-N: 不执行远程命令</blockquote><blockquote>-f：后台运行</blockquote><blockquote>-g：允许远程主机连接主机的转发端口</blockquote><blockquote>-R: 设定端口转发地址</blockquote><blockquote>proxy_port：vps用转发的端口，也就是computer用于登陆的端口</blockquote><blockquote>remote_port: vps上sshd监听的端口，默认是22，但一般vps上都不会采用默认</blockquote><blockquote>vps_ip：vps的公网ip</blockquote><ol><li>如果连接成功，则在vps上</li><li><br></li></ol><pre class="ql-syntax" spellcheck="false">1
+vps$ lsof -i :proxy_port
+</pre><ol><li>可看到已经vps上已经监听代理端口，此时在computer上</li><li><br></li></ol><pre class="ql-syntax" spellcheck="false">1
+computer$ ssh -p proxy_port root@vps_ip
+</pre><ol><li class="ql-indent-1"><strong>这里的root是路由器router上的，同样的输入的密码也要是路由器上的root的用户密码。</strong></li></ol><h3>链接保持</h3><p>ssh的连接在一段时间内无数据会自动端口，一断开内网就没法继续穿透了，好在有个维护链接的工具autossh，</p><p><br></p><ul><li>autossh安装</li></ul><pre class="ql-syntax" spellcheck="false">1
+2
+router$ opkg update
+router$ opkg install autossh
+</pre><p>如果安装不成功，可在<a href="https://github.com/hewenhao2008/autossh-openwrt" target="_blank">github</a>上下载源码，然后使用路由器对应的SDK编译成ipk文件安装。</p><p><br></p><ul><li>autossh配置</li></ul><pre class="ql-syntax" spellcheck="false">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+router$ vim /etc/config/autossh
+config autossh
+        option ssh      '-i /root/.ssh/id_rsa -N -R proxy_port:localhost:22 vps_router@vps_ip -p remote_port'
+        option gatetime '0'
+        option monitorport      '20000'
+        option echo_port        '7'
+        option poll     '10'
+        option first_poll       '10'
+        option debug    '1'  #下面三行，只是为了测试配置是否成功，完成后可删掉
+        option log_file         '/var/log/ssh_nat.log'
+        option log_level        '4
+</pre><p>保存退出</p><p><br></p><pre class="ql-syntax" spellcheck="false">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+router$ vim /etc/init.d/autossh
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2007-2011 OpenWrt.org
+START=80
+start_instance() {
+        local section="$1"
+        config_get ssh "$section" 'ssh'
+        config_get gatetime "$section" 'gatetime'
+        config_get monitorport "$section" 'monitorport'
+        config_get echo_port "$section" 'echo_port'
+        config_get poll "$section" 'poll'
+        config_get first_poll "$section" 'first_poll'
+        config_get debug "$section" 'debug'
+        config_get log_file "$section" 'log_file'
+        config_get log_level "$section" 'log_level'
+        export AUTOSSH_GATETIME="${gatetime}"
+        export AUTOSSH_POLL="${poll}"
+        export AUTOSSH_FIRST_POLL="${first_poll}"
+        export AUTOSSH_DEBUG="${debug}"
+        export AUTOSSH_LOGFILE="${log_file}"
+        export AUTOSSH_LOGLEVEL="${log_level}"
+        export AUTOSSH_PATH="/usr/bin/ssh"   #这一行，可根据实际情况加入
+#       service_start /usr/sbin/autossh -M ${monitorport}:${echo_port} -f ${ssh}
+        service_start /usr/sbin/autossh -M ${monitorport} -f ${ssh}
+}
+boot() {
+    return
+}
+start() {
+        config_load 'autossh'
+        config_foreach start_instance 'autossh'
+}
+stop() {
+        service_stop /usr/sbin/autossh
+}
+</pre><p>保存退出，设置开机启动</p><p><br></p><pre class="ql-syntax" spellcheck="false">1
+router$ /etc/init.d/autossh enable
+</pre><p>启动autossh</p><p><br></p><pre class="ql-syntax" spellcheck="false">1
+router$ /etc/init.d/autossh restart
+</pre><p>确认连接到vps</p><p><br></p><pre class="ql-syntax" spellcheck="false">1
+router$ netstat -anptu | grep ssh
+</pre><p>如果没有结果，则根据/var/log/ssh_nat.log解决</p><p><br></p><p><br></p><p><br></p><h1><a href="about:blank" target="_blank"> Hello World </a></h1><p>Posted on 2016-10-11 </p><p>Welcome to <a href="https://hexo.io/" target="_blank">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank">GitHub</a>.</p><p><br></p><h2>Quick Start</h2><h3>Create a new post</h3><pre class="ql-syntax" spellcheck="false">1
+$ hexo new "My New Post"
+</pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank">Writing</a></p><p><br></p><h3>Run server</h3><pre class="ql-syntax" spellcheck="false">1
+$ hexo server
+</pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank">Server</a></p><p><br></p><h3>Generate static files</h3><pre class="ql-syntax" spellcheck="false">1
+$ hexo generate
+</pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank">Generating</a></p><p><br></p><h3>Deploy to remote sites</h3><pre class="ql-syntax" spellcheck="false">1
+$ hexo deploy
+</pre><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank">Deployment</a></p><p><br></p><p><br></p><p><br></p><p><br></p><p><img src="//:0" alt="Lean">Lean</p><p>If you can fight, fight</p><p><a href="about:blank" target="_blank">3posts</a></p><p><a href="about:blank" target="_blank">3tags</a></p><p><br></p><p>© 2017Lean</p><p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a></p><p>Theme - <a href="https://github.com/iissnan/hexo-theme-next" target="_blank"> NexT.Muse </a></p><p><br></p><p> if (Object.prototype.toString.call(window.Promise) !== '[object Function]') { window.Promise = null; } </p><p><br></p>
